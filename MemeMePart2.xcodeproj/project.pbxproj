@@ -40,7 +40,7 @@
 		E01E12521C9E45410032E988 = {
 			isa = PBXGroup;
 			children = (
-				E01E125D1C9E45410032E988 /* MemeMePractice */,
+				E01E125D1C9E45410032E988 /* MemeMePart2 */,
 				E01E125C1C9E45410032E988 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,7 +53,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E01E125D1C9E45410032E988 /* MemeMePractice */ = {
+		E01E125D1C9E45410032E988 /* MemeMePart2 */ = {
 			isa = PBXGroup;
 			children = (
 				E01E125E1C9E45410032E988 /* AppDelegate.swift */,
@@ -64,6 +64,7 @@
 				E01E126A1C9E45410032E988 /* Info.plist */,
 				E0554A361CA8C06000E6ABE9 /* MemeModel.swift */,
 			);
+			name = MemeMePart2;
 			path = MemeMePractice;
 			sourceTree = "<group>";
 		};
