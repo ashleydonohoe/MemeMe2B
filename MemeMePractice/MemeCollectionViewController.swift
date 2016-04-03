@@ -11,11 +11,13 @@ import UIKit
 class MemeCollectionViewController: UICollectionViewController{
     
     var memes: [Meme]!
+    
     @IBOutlet var memeCollection: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .Plain, target: self, action: #selector(MemeCollectionViewController.addMeme))
         // Do any additional setup after loading the view.
         
         let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
@@ -25,6 +27,10 @@ class MemeCollectionViewController: UICollectionViewController{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        memeCollection.reloadData()
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -41,5 +47,7 @@ class MemeCollectionViewController: UICollectionViewController{
         return cell
     }
     
-
+    func addMeme() {
+        performSegueWithIdentifier("addMeme", sender: self)
+    }
 }

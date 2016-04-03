@@ -119,6 +119,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
    func save() {
         let meme = Meme(topText: topText.text!, bottomtext: bottomText.text!, image: imagePickerView.image!, memedImage: memedImage!)
         (UIApplication.sharedApplication().delegate as! AppDelegate).memes.append(meme)
+        let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        print("saving meme")
+        print(meme)
+        print("Showing Memes Array")
+        print(applicationDelegate.memes)
     }
     
     // Clears placeholder text from screen when user taps inside a textfield

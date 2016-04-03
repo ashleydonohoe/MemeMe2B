@@ -9,26 +9,31 @@
 
 import UIKit
 
-class MemeTableViewController: UITableViewController {
+class MemeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var memes: [Meme]!
-    
     
     @IBOutlet var memeTable: UITableView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        memes = applicationDelegate.memes
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .Plain, target: self, action: #selector(MemeTableViewController.addMeme))
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func viewWillAppear(animated: Bool) {
+        let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        memes = applicationDelegate.memes
+        print(memes)
+        memeTable.reloadData()
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MemeCell")! as UITableViewCell
-        let meme = self.memes[indexPath.row]
+        let meme = memes[indexPath.row]
 
         cell.textLabel?.text = meme.topText
         cell.imageView?.image = meme.memedImage
@@ -36,10 +41,8 @@ class MemeTableViewController: UITableViewController {
         return cell
     }
     
-    
-    
-    @IBAction func addMeme(sender: AnyObject) {
-        
+    func addMeme() {
+        performSegueWithIdentifier("addMeme", sender: self)
     }
 }
 
