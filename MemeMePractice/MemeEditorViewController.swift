@@ -57,7 +57,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         super.viewWillAppear(animated)
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
-        self.subscribeToKeyboardNotifications()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -128,8 +127,19 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     // Clears placeholder text from screen when user taps inside a textfield
     func textFieldDidBeginEditing(textField: UITextField) {
-        textField.text = ""
         textField.becomeFirstResponder()
+        
+        // Checks top and bottom text to see if it's been changed
+        if textField.text != "TOP" || textField.text != "BOTTOM" {
+            textField.text = ""
+        }
+        
+        // Checks if active textField is the bottomText. If so, the keyboard will move up. Else, keyboard notifications won't be subscribed to. This code is needed so the top field doesn't make the keyboard move up and hide the field from view.
+        if textField.isEqual(bottomText) {
+            self.subscribeToKeyboardNotifications()
+        } else {
+            self.unsubscribeFromKeyboardNotifications()
+        }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
