@@ -16,6 +16,7 @@
 		E0554A3B1CA8E52B00E6ABE9 /* MemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0554A3A1CA8E52B00E6ABE9 /* MemeTableViewController.swift */; };
 		E0AF16661CB0DA9500BC710E /* MemeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AF16651CB0DA9500BC710E /* MemeCollectionViewController.swift */; };
 		E0AF16681CB1A49A00BC710E /* CustomMemeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AF16671CB1A49A00BC710E /* CustomMemeViewCell.swift */; };
+		E0AF166A1CB1D92800BC710E /* MemeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AF16691CB1D92800BC710E /* MemeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E0554A3A1CA8E52B00E6ABE9 /* MemeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTableViewController.swift; sourceTree = "<group>"; };
 		E0AF16651CB0DA9500BC710E /* MemeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewController.swift; sourceTree = "<group>"; };
 		E0AF16671CB1A49A00BC710E /* CustomMemeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMemeViewCell.swift; sourceTree = "<group>"; };
+		E0AF16691CB1D92800BC710E /* MemeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				E0554A3A1CA8E52B00E6ABE9 /* MemeTableViewController.swift */,
 				E0AF16651CB0DA9500BC710E /* MemeCollectionViewController.swift */,
 				E0AF16671CB1A49A00BC710E /* CustomMemeViewCell.swift */,
+				E0AF16691CB1D92800BC710E /* MemeDetailViewController.swift */,
 			);
 			name = MemeMePart2;
 			path = MemeMePractice;
@@ -152,6 +155,7 @@
 				E0554A371CA8C06000E6ABE9 /* MemeModel.swift in Sources */,
 				E0AF16661CB0DA9500BC710E /* MemeCollectionViewController.swift in Sources */,
 				E0554A3B1CA8E52B00E6ABE9 /* MemeTableViewController.swift in Sources */,
+				E0AF166A1CB1D92800BC710E /* MemeDetailViewController.swift in Sources */,
 				E01E125F1C9E45410032E988 /* AppDelegate.swift in Sources */,
 				E0AF16681CB1A49A00BC710E /* CustomMemeViewCell.swift in Sources */,
 			);

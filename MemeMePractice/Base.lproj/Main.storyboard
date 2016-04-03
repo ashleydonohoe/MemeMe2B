@@ -251,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2440.5" y="1158"/>
+            <point key="canvasLocation" x="1084.5" y="1990"/>
         </scene>
         <!--Tab Bar View-->
         <scene sceneID="uXC-Q5-H4B">
@@ -324,6 +324,59 @@
             </objects>
             <point key="canvasLocation" x="1743" y="216"/>
         </scene>
+        <!--Meme Detail View Controller-->
+        <scene sceneID="LZq-Gu-Lo9">
+            <objects>
+                <viewController storyboardIdentifier="memeDisplayViewController" title="Meme Detail View Controller" id="ndK-og-Z1Q" customClass="MemeDetailViewController" customModule="MemeMePart2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gJk-Mx-m80"/>
+                        <viewControllerLayoutGuide type="bottom" id="lFi-7v-vUK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lx0-0A-9XA">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jXh-Cd-3bh">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lFi-7v-vUK" firstAttribute="top" secondItem="jXh-Cd-3bh" secondAttribute="bottom" constant="149" id="ExY-c9-PRg"/>
+                            <constraint firstAttribute="trailing" secondItem="jXh-Cd-3bh" secondAttribute="trailing" id="Ocp-Fk-ULR"/>
+                            <constraint firstItem="jXh-Cd-3bh" firstAttribute="leading" secondItem="lx0-0A-9XA" secondAttribute="leading" id="VZR-41-y8t"/>
+                            <constraint firstItem="jXh-Cd-3bh" firstAttribute="top" secondItem="gJk-Mx-m80" secondAttribute="bottom" constant="90" id="geL-F0-EEt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="jXh-Cd-3bh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Ocp-Fk-ULR"/>
+                                <exclude reference="VZR-41-y8t"/>
+                                <exclude reference="geL-F0-EEt"/>
+                                <exclude reference="ExY-c9-PRg"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="jXh-Cd-3bh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Ocp-Fk-ULR"/>
+                                <include reference="VZR-41-y8t"/>
+                                <include reference="geL-F0-EEt"/>
+                                <include reference="ExY-c9-PRg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="memeImage" destination="jXh-Cd-3bh" id="uNT-7J-fgZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dtD-Ho-Trb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3016.5" y="-74"/>
+        </scene>
         <!--MemeCollectionViewController-->
         <scene sceneID="kkX-1W-SIb">
             <objects>
@@ -331,6 +384,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yVK-xd-hyV">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZPv-JX-6OY">
                             <size key="itemSize" width="129" height="131"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -378,7 +432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="06z-rd-Rwj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="678" y="1867"/>
+            <point key="canvasLocation" x="2934" y="943"/>
         </scene>
         <!--MemeTableView-->
         <scene sceneID="gDy-9B-0UQ">
