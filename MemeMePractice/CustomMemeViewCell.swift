@@ -9,8 +9,7 @@
 import UIKit
 
 class CustomMemeViewCell: UICollectionViewCell {
-    
     @IBOutlet weak var memeImageView: UIImageView!
-    @IBOutlet weak var memeLabel: UILabel!
+
   
 }

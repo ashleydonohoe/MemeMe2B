@@ -22,6 +22,7 @@ class MemeCollectionViewController: UICollectionViewController{
         
         let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         memes = applicationDelegate.memes
+        print(memes)
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,9 +40,8 @@ class MemeCollectionViewController: UICollectionViewController{
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CustomMemeCell", forIndexPath: indexPath) as! CustomMemeViewCell
-        let meme = self.memes[indexPath.row]
-        
-        cell.memeLabel.text = meme.topText
+        let meme = self.memes[indexPath.item]
+        //cell.memeLabel.text = "\(meme.topText) \(meme.bottomtext)"
         cell.memeImageView.image = meme.memedImage
         
         return cell
