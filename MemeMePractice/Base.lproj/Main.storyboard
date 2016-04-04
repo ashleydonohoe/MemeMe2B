@@ -236,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084.5" y="1990"/>
+            <point key="canvasLocation" x="1005" y="3413"/>
         </scene>
         <!--Tab Bar View-->
         <scene sceneID="uXC-Q5-H4B">
@@ -298,7 +298,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1743" y="216"/>
+            <point key="canvasLocation" x="3387" y="3028"/>
         </scene>
         <!--Meme Detail-->
         <scene sceneID="LZq-Gu-Lo9">

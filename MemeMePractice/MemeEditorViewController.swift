@@ -65,10 +65,11 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     @IBAction func clearMeme(sender: AnyObject) {
-        //TODO: Clear meme image and text fields
+        // Clear meme image and text fields and return to Sent Memes
         imagePickerView.image = nil
         topText.text = "TOP"
         bottomText.text = "BOTTOM"
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     // Presents Image Picker to user
@@ -118,11 +119,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
    func save() {
         let meme = Meme(topText: topText.text!, bottomtext: bottomText.text!, image: imagePickerView.image!, memedImage: memedImage!)
         (UIApplication.sharedApplication().delegate as! AppDelegate).memes.append(meme)
-        let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        print("saving meme")
-        print(meme)
-        print("Showing Memes Array")
-        print(applicationDelegate.memes)
     }
     
     // Clears placeholder text from screen when user taps inside a textfield
