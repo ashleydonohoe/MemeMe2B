@@ -22,7 +22,6 @@ class MemeCollectionViewController: UICollectionViewController{
         
         let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         memes = applicationDelegate.memes
-        print(memes)
     }
 
     override func didReceiveMemoryWarning() {

@@ -18,13 +18,27 @@ class MemeDetailViewController: UIViewController {
         
         // Sets meme image
         memeImage.image = meme.memedImage
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .Plain, target: self, action: #selector(MemeDetailViewController.shareMeme(_:)))
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func shareMeme(sender: UIBarButtonItem) {
+        let imageToShare = memeImage.image
+        let controller = UIActivityViewController(activityItems: [imageToShare!], applicationActivities: nil)
+        controller.completionWithItemsHandler = {
+            (activity, success, items, error) in
+            if success {
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+        }
+        presentViewController(controller, animated: true, completion: nil)
     }
 
 }
