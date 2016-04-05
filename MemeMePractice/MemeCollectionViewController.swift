@@ -8,7 +8,9 @@
 
 import UIKit
 
-class MemeCollectionViewController: UICollectionViewController{
+class MemeCollectionViewController: UICollectionViewController {
+    
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     var memes: [Meme]!
     
@@ -18,10 +20,23 @@ class MemeCollectionViewController: UICollectionViewController{
         super.viewDidLoad()
         
             navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .Plain, target: self, action: #selector(MemeCollectionViewController.addMeme))
-        // Do any additional setup after loading the view.
         
-        let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        memes = applicationDelegate.memes
+        // Checks for device orientation and will set spacing and dimension based on portrait vs. landscape
+        var space: CGFloat!
+        var dimension: CGFloat!
+        
+        if(UIDeviceOrientationIsPortrait(UIDevice.currentDevice().orientation)) {
+            space = 3.0
+            dimension = (self.view.frame.size.width - (2 * space)) / 3.0
+        } else {
+            space = 5.0
+            dimension = (self.view.frame.size.width - (2 * space)) / 5.0
+        }
+        
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.minimumLineSpacing = space
+        flowLayout.itemSize = CGSizeMake(dimension, dimension)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,6 +45,8 @@ class MemeCollectionViewController: UICollectionViewController{
     }
     
     override func viewWillAppear(animated: Bool) {
+        let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        memes = applicationDelegate.memes
         memeCollection.reloadData()
     }
     

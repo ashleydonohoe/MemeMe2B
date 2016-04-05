@@ -357,7 +357,7 @@
         <scene sceneID="kkX-1W-SIb">
             <objects>
                 <viewController title="MemeCollectionViewController" id="crK-ta-P4H" customClass="MemeCollectionViewController" customModule="MemeMePart2" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yVK-xd-hyV">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" id="yVK-xd-hyV">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -365,7 +365,7 @@
                             <size key="itemSize" width="129" height="131"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="3" minY="3" maxX="3" maxY="3"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomMemeCell" id="FGr-Ow-vWV" customClass="CustomMemeViewCell" customModule="MemeMePart2" customModuleProvider="target">
@@ -377,21 +377,36 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Dh-cw-svn">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="0.0" y="0.0" width="129" height="131"/>
-                                            </variation>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="1Dh-cw-svn" firstAttribute="top" secondItem="FGr-Ow-vWV" secondAttribute="top" id="DLZ-MA-Toz"/>
+                                    <constraint firstItem="1Dh-cw-svn" firstAttribute="leading" secondItem="FGr-Ow-vWV" secondAttribute="leading" id="InQ-3n-paH"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Dh-cw-svn" secondAttribute="trailing" id="MBb-0D-dBI"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Dh-cw-svn" secondAttribute="bottom" id="Qnt-tb-Yyj"/>
+                                </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="1Dh-cw-svn"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="DLZ-MA-Toz"/>
+                                        <exclude reference="InQ-3n-paH"/>
+                                        <exclude reference="MBb-0D-dBI"/>
+                                        <exclude reference="Qnt-tb-Yyj"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="1Dh-cw-svn"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="DLZ-MA-Toz"/>
+                                        <include reference="InQ-3n-paH"/>
+                                        <include reference="MBb-0D-dBI"/>
+                                        <include reference="Qnt-tb-Yyj"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -402,6 +417,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="2Vf-j3-Iv2"/>
                     <connections>
+                        <outlet property="flowLayout" destination="ZPv-JX-6OY" id="r8D-BQ-tS7"/>
                         <outlet property="memeCollection" destination="yVK-xd-hyV" id="irJ-Zq-Hm1"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="addMeme" id="Rgm-K1-pZE"/>
                     </connections>
@@ -429,6 +445,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MeV-6n-cPb"/>
+        <segue reference="Rgm-K1-pZE"/>
     </inferredMetricsTieBreakers>
 </document>
