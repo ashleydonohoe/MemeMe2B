@@ -419,7 +419,7 @@
                             </collectionViewCell>
                         </cells>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="2Vf-j3-Iv2"/>
+                    <navigationItem key="navigationItem" title="Sent Memes" id="2Vf-j3-Iv2"/>
                     <connections>
                         <outlet property="flowLayout" destination="ZPv-JX-6OY" id="r8D-BQ-tS7"/>
                         <outlet property="memeCollection" destination="yVK-xd-hyV" id="irJ-Zq-Hm1"/>

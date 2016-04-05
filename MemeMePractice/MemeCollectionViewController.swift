@@ -19,7 +19,7 @@ class MemeCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .Plain, target: self, action: #selector(MemeCollectionViewController.addMeme))
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(MemeCollectionViewController.addMeme))
         
         // Checks for device orientation and will set spacing and dimension based on portrait vs. landscape
         var space: CGFloat!
