@@ -10,7 +10,6 @@
         <!--MemeCollectionView-->
         <scene sceneID="iEt-UU-e6c">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="96B-SN-7rH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController title="MemeCollectionView" id="V1W-tv-GIh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Collection" id="4SR-dk-Abo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pqj-e4-ewd">
@@ -21,6 +20,7 @@
                         <segue destination="crK-ta-P4H" kind="relationship" relationship="rootViewController" id="yOB-Kk-TwS"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96B-SN-7rH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-553.5" y="1788"/>
         </scene>
@@ -158,14 +158,13 @@
                                 <exclude reference="7hh-pf-tnl"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="D4y-Az-KQa"/>
-                                <exclude reference="J8u-w0-rp2"/>
-                                <exclude reference="ZOh-cz-8EU"/>
-                                <exclude reference="3k4-9F-mEW"/>
-                                <exclude reference="8X6-YE-YNL"/>
-                                <exclude reference="OQb-7E-bXA"/>
-                                <exclude reference="dr6-2g-zUB"/>
-                                <exclude reference="mZE-me-5Ar"/>
+                                <exclude reference="I12-ao-vPH"/>
+                                <exclude reference="s4Q-wF-Q1G"/>
+                                <exclude reference="G1Z-dc-BXz"/>
+                                <exclude reference="SVf-nZ-wkn"/>
+                                <exclude reference="UTs-4R-uUw"/>
+                                <exclude reference="uRS-fF-x2W"/>
+                                <exclude reference="vwH-zK-DVB"/>
                                 <exclude reference="1dA-SH-bhN"/>
                                 <exclude reference="92K-oq-o2v"/>
                                 <exclude reference="Ga7-hf-Zfg"/>
@@ -173,17 +172,18 @@
                                 <exclude reference="b0w-mU-suF"/>
                                 <exclude reference="dtO-zi-F4F"/>
                                 <exclude reference="y8s-t0-4cQ"/>
-                                <exclude reference="G1Z-dc-BXz"/>
-                                <exclude reference="SVf-nZ-wkn"/>
-                                <exclude reference="UTs-4R-uUw"/>
-                                <exclude reference="uRS-fF-x2W"/>
-                                <exclude reference="vwH-zK-DVB"/>
+                                <exclude reference="3k4-9F-mEW"/>
+                                <exclude reference="8X6-YE-YNL"/>
+                                <exclude reference="OQb-7E-bXA"/>
+                                <exclude reference="dr6-2g-zUB"/>
+                                <exclude reference="mZE-me-5Ar"/>
                                 <exclude reference="DwH-Ts-OXd"/>
                                 <exclude reference="KTz-9v-XTQ"/>
                                 <exclude reference="jk7-pd-iir"/>
                                 <exclude reference="qjm-mA-m99"/>
-                                <exclude reference="I12-ao-vPH"/>
-                                <exclude reference="s4Q-wF-Q1G"/>
+                                <exclude reference="D4y-Az-KQa"/>
+                                <exclude reference="J8u-w0-rp2"/>
+                                <exclude reference="ZOh-cz-8EU"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -195,14 +195,13 @@
                                 <include reference="7hh-pf-tnl"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="D4y-Az-KQa"/>
-                                <include reference="J8u-w0-rp2"/>
-                                <include reference="ZOh-cz-8EU"/>
-                                <include reference="3k4-9F-mEW"/>
-                                <include reference="8X6-YE-YNL"/>
-                                <include reference="OQb-7E-bXA"/>
-                                <exclude reference="dr6-2g-zUB"/>
-                                <exclude reference="mZE-me-5Ar"/>
+                                <include reference="I12-ao-vPH"/>
+                                <include reference="s4Q-wF-Q1G"/>
+                                <include reference="G1Z-dc-BXz"/>
+                                <exclude reference="SVf-nZ-wkn"/>
+                                <exclude reference="UTs-4R-uUw"/>
+                                <include reference="uRS-fF-x2W"/>
+                                <exclude reference="vwH-zK-DVB"/>
                                 <exclude reference="1dA-SH-bhN"/>
                                 <include reference="92K-oq-o2v"/>
                                 <exclude reference="Ga7-hf-Zfg"/>
@@ -210,17 +209,18 @@
                                 <include reference="b0w-mU-suF"/>
                                 <include reference="dtO-zi-F4F"/>
                                 <exclude reference="y8s-t0-4cQ"/>
-                                <include reference="G1Z-dc-BXz"/>
-                                <exclude reference="SVf-nZ-wkn"/>
-                                <exclude reference="UTs-4R-uUw"/>
-                                <include reference="uRS-fF-x2W"/>
-                                <exclude reference="vwH-zK-DVB"/>
+                                <include reference="3k4-9F-mEW"/>
+                                <include reference="8X6-YE-YNL"/>
+                                <include reference="OQb-7E-bXA"/>
+                                <exclude reference="dr6-2g-zUB"/>
+                                <exclude reference="mZE-me-5Ar"/>
                                 <include reference="DwH-Ts-OXd"/>
                                 <include reference="KTz-9v-XTQ"/>
                                 <exclude reference="jk7-pd-iir"/>
                                 <include reference="qjm-mA-m99"/>
-                                <include reference="I12-ao-vPH"/>
-                                <include reference="s4Q-wF-Q1G"/>
+                                <include reference="D4y-Az-KQa"/>
+                                <include reference="J8u-w0-rp2"/>
+                                <include reference="ZOh-cz-8EU"/>
                             </mask>
                         </variation>
                     </view>
@@ -259,22 +259,24 @@
         <!--MemeTableViewController-->
         <scene sceneID="5Vq-qY-TDH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N2g-IY-Z54" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MemeTableViewController" title="MemeTableViewController" id="sFi-dg-mRl" customClass="MemeTableViewController" customModule="MemeMePart2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="81" sectionHeaderHeight="28" sectionFooterHeight="28" id="llJ-g6-mbP">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MemeCell" textLabel="ySW-7d-zbT" rowHeight="81" style="IBUITableViewCellStyleDefault" id="nTf-TV-wIx">
+                                <rect key="frame" x="0.0" y="92" width="600" height="81"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nTf-TV-wIx" id="ZzI-qY-IUn">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="80.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ySW-7d-zbT">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="80.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="widthClass=compact">
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -297,6 +299,7 @@
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="addMeme" id="MeV-6n-cPb"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N2g-IY-Z54" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3387" y="3028"/>
         </scene>
@@ -309,6 +312,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lFi-7v-vUK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lx0-0A-9XA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jXh-Cd-3bh">
@@ -357,19 +361,19 @@
         <scene sceneID="kkX-1W-SIb">
             <objects>
                 <viewController title="MemeCollectionViewController" id="crK-ta-P4H" customClass="MemeCollectionViewController" customModule="MemeMePart2" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" id="yVK-xd-hyV">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" indicatorStyle="white" dataMode="prototypes" id="yVK-xd-hyV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZPv-JX-6OY">
                             <size key="itemSize" width="129" height="131"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="3" minY="3" maxX="3" maxY="3"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomMemeCell" id="FGr-Ow-vWV" customClass="CustomMemeViewCell" customModule="MemeMePart2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" reuseIdentifier="CustomMemeCell" id="FGr-Ow-vWV" customClass="CustomMemeViewCell" customModule="MemeMePart2" customModuleProvider="target">
+                                <rect key="frame" x="3" y="67" width="129" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="129" height="131"/>
