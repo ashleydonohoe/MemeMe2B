@@ -22,22 +22,6 @@ class MemeCollectionViewController: UICollectionViewController {
             navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(MemeCollectionViewController.addMeme))
         
         getMemes()
-        
-        // Checks for device orientation and will set spacing and dimension based on portrait vs. landscape
-        var space: CGFloat!
-        var dimension: CGFloat!
-        
-        if(UIDeviceOrientationIsPortrait(UIDevice.currentDevice().orientation)) {
-            space = 3.0
-            dimension = (self.view.frame.size.width - (2 * space)) / 3.0
-        } else {
-            space = 5.0
-            dimension = (self.view.frame.size.width - (2 * space)) / 5.0
-        }
-        
-        flowLayout.minimumInteritemSpacing = space
-        flowLayout.minimumLineSpacing = space
-        flowLayout.itemSize = CGSizeMake(dimension, dimension)
 
     }
     
@@ -53,6 +37,21 @@ class MemeCollectionViewController: UICollectionViewController {
     
     override func viewWillAppear(animated: Bool) {
         getMemes()
+        // Checks for device orientation and will set spacing and dimension based on portrait vs. landscape
+        var space: CGFloat!
+        var dimension: CGFloat!
+        
+        if(UIDeviceOrientationIsPortrait(UIDevice.currentDevice().orientation)) {
+            space = 3.0
+            dimension = (self.view.frame.size.width - (2 * space)) / 3.0
+        } else {
+            space = 5.0
+            dimension = (self.view.frame.size.width - (2 * space)) / 5.0
+        }
+        
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.minimumLineSpacing = space
+        flowLayout.itemSize = CGSizeMake(dimension, dimension)
         memeCollection.reloadData()
     }
     

@@ -137,12 +137,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
             textField.text = ""
         }
         
-        // Checks if active textField is the bottomText. If so, the keyboard will move up. Else, keyboard notifications won't be subscribed to. This code is needed so the top field doesn't make the keyboard move up and hide the field from view.
-        if textField.isEqual(bottomText) {
-           subscribeToKeyboardNotifications()
-        } else {
-           unsubscribeFromKeyboardNotifications()
-        }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

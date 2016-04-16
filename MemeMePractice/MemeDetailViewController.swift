@@ -22,12 +22,6 @@ class MemeDetailViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .Plain, target: self, action: #selector(MemeDetailViewController.shareMeme(_:)))
 
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     func shareMeme(sender: UIBarButtonItem) {
         let imageToShare = memeImage.image
