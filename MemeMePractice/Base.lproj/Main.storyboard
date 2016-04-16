@@ -40,13 +40,18 @@
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HjZ-xO-HMN" userLabel="bottomText">
-                                <rect key="frame" x="37" y="483" width="526" height="30"/>
+                                <rect key="frame" x="37" y="490" width="526" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="hUm-G9-aM8"/>
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hUm-G9-aM8"/>
+                                    </mask>
+                                </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VZj-2j-Aby" userLabel="topText">
                                 <rect key="frame" x="37" y="99" width="526" height="23"/>
@@ -119,26 +124,32 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VZj-2j-Aby" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="05C-OA-1or"/>
+                            <constraint firstItem="VZj-2j-Aby" firstAttribute="leading" secondItem="HjZ-xO-HMN" secondAttribute="leading" id="0eb-BA-khp"/>
                             <constraint firstItem="n56-HE-EOm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="5Yh-mk-VuY"/>
                             <constraint firstItem="kgv-Qm-lBB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="5mV-Pr-fIf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kgv-Qm-lBB" secondAttribute="trailing" constant="-20" id="A0H-P8-j1H"/>
-                            <constraint firstItem="VZj-2j-Aby" firstAttribute="top" secondItem="n56-HE-EOm" secondAttribute="bottom" constant="35" id="Jkx-f0-r9u"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HjZ-xO-HMN" secondAttribute="trailing" constant="17" id="Jt9-Gg-P50"/>
                             <constraint firstItem="ZuY-Se-xUm" firstAttribute="trailing" secondItem="n56-HE-EOm" secondAttribute="trailing" id="KFf-BX-feI"/>
                             <constraint firstItem="n56-HE-EOm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Qjg-yr-iLE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="n56-HE-EOm" secondAttribute="trailing" constant="-20" id="W64-GI-5Tg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kgv-Qm-lBB" secondAttribute="bottom" id="X6p-X1-eAS"/>
+                            <constraint firstItem="VZj-2j-Aby" firstAttribute="top" secondItem="n56-HE-EOm" secondAttribute="bottom" constant="35" id="alj-Cg-eiA"/>
                             <constraint firstAttribute="bottomMargin" secondItem="ZuY-Se-xUm" secondAttribute="bottom" id="amM-0v-hTa"/>
                             <constraint firstItem="HjZ-xO-HMN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="c1M-aw-5I3"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kgv-Qm-lBB" secondAttribute="bottom" id="j6l-dQ-1TG"/>
                             <constraint firstItem="kgv-Qm-lBB" firstAttribute="top" secondItem="HjZ-xO-HMN" secondAttribute="bottom" constant="43" id="nCx-h8-6hz"/>
+                            <constraint firstItem="VZj-2j-Aby" firstAttribute="trailing" secondItem="HjZ-xO-HMN" secondAttribute="trailing" id="qBa-Eu-5U0"/>
                             <constraint firstItem="ZuY-Se-xUm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qHo-nw-LBI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VZj-2j-Aby" secondAttribute="trailing" constant="17" id="rc3-gF-0sR"/>
+                            <constraint firstItem="HjZ-xO-HMN" firstAttribute="top" secondItem="VZj-2j-Aby" secondAttribute="bottom" constant="361" id="ra3-Vh-V1m"/>
                             <constraint firstItem="ZuY-Se-xUm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="s5c-kt-mNz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kgv-Qm-lBB" secondAttribute="trailing" constant="-20" id="xBk-4R-ziI"/>
                             <constraint firstItem="kgv-Qm-lBB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="yBC-vx-C4N"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ra3-Vh-V1m"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="bottomText" destination="HjZ-xO-HMN" id="0Ja-mM-So4"/>

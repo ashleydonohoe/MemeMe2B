@@ -160,7 +160,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     // Moves the view when keyboard covers text field
     func keyboardWillShow(notification: NSNotification) {
+        
+        if bottomText.isFirstResponder() {
         view.frame.origin.y -= getKeyboardHeight(notification)
+        }
     }
     
     func getKeyboardHeight(notification: NSNotification) -> CGFloat {
