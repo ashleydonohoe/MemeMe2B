@@ -73,7 +73,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     // Presents Image Picker to user
     @IBAction func pickAnImage(sender: AnyObject) {
-        
         presentImagePickerController(UIImagePickerControllerSourceType.PhotoLibrary)
     }
     
@@ -163,10 +162,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     // Moves the view when keyboard covers text field
     func keyboardWillShow(notification: NSNotification) {
         view.frame.origin.y -= getKeyboardHeight(notification)
-    }
-    
-    override func prefersStatusBarHidden() -> Bool {
-        return true
     }
     
     func getKeyboardHeight(notification: NSNotification) -> CGFloat {

@@ -66,6 +66,9 @@
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n56-HE-EOm">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ieu-cK-rE5"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Meme Me" id="QtQ-bU-e3f">
                                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="xau-nQ-DQg">
@@ -80,6 +83,16 @@
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ieu-cK-rE5"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ieu-cK-rE5"/>
+                                    </mask>
+                                </variation>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZuY-Se-xUm">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
