@@ -56,6 +56,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         super.viewWillAppear(animated)
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
+        subscribeToKeyboardNotifications()
     }
     
     override func prefersStatusBarHidden() -> Bool {
