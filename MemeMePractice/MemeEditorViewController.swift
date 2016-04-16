@@ -39,18 +39,17 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         shareButton.enabled = false
         
-        // Sets default text attributes and centers text
-        topText.defaultTextAttributes = memeTextAttributes
-        bottomText.defaultTextAttributes = memeTextAttributes
-        
-        topText.text = "TOP"
-        bottomText.text = "BOTTOM"
-        
-        topText.textAlignment = .Center
-        bottomText.textAlignment = .Center
-        
-        self.topText.delegate = self
-        self.bottomText.delegate = self
+        setUpText(topText, text: "TOP")
+        setUpText(bottomText, text: "BOTTOM")
+    }
+    
+    
+    // Sets text, text attributes, text alignment, and delegate to self for both text fields
+    func setUpText(textField: UITextField, text: String) {
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.text = text
+        textField.textAlignment = .Center
+        textField.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -61,7 +60,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        self.unsubscribeFromKeyboardNotifications()
+        unsubscribeFromKeyboardNotifications()
     }
     
     @IBAction func clearMeme(sender: AnyObject) {
@@ -74,19 +73,23 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     // Presents Image Picker to user
     @IBAction func pickAnImage(sender: AnyObject) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        self.presentViewController(imagePicker, animated: true, completion: nil)
-        }
+        
+        presentImagePickerController(UIImagePickerControllerSourceType.PhotoLibrary)
+    }
     
     // Allows user to pick image from camera
     @IBAction func pickFromCamera(sender: UIBarButtonItem) {
+        presentImagePickerController(UIImagePickerControllerSourceType.Camera)
+    }
+    
+    // Creates a UiImagePickerController, sets the delegate to self, sets sourcetype, and presents imagePicker
+    func presentImagePickerController(source: UIImagePickerControllerSourceType) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+        imagePicker.sourceType = source
         presentViewController(imagePicker, animated: true, completion: nil)
     }
+
     
     // Sets the picked image to be in the Image View
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {

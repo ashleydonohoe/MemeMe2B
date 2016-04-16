@@ -21,6 +21,8 @@ class MemeCollectionViewController: UICollectionViewController {
         
             navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(MemeCollectionViewController.addMeme))
         
+        getMemes()
+        
         // Checks for device orientation and will set spacing and dimension based on portrait vs. landscape
         var space: CGFloat!
         var dimension: CGFloat!
@@ -38,6 +40,11 @@ class MemeCollectionViewController: UICollectionViewController {
         flowLayout.itemSize = CGSizeMake(dimension, dimension)
 
     }
+    
+    func getMemes() {
+        let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        memes = applicationDelegate.memes
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -45,8 +52,7 @@ class MemeCollectionViewController: UICollectionViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        memes = applicationDelegate.memes
+        getMemes()
         memeCollection.reloadData()
     }
     

@@ -10,6 +10,7 @@
 import UIKit
 
 class MemeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     var memes: [Meme]!
     
     @IBOutlet var memeTable: UITableView!
@@ -18,12 +19,20 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(MemeTableViewController.addMeme))
+        getMemes()
     }
     
     override func viewWillAppear(animated: Bool) {
+        /*let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        memes = applicationDelegate.memes
+        memeTable.reloadData()*/
+        getMemes()
+        memeTable.reloadData()
+    }
+    
+    func getMemes() {
         let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         memes = applicationDelegate.memes
-        memeTable.reloadData()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,5 +59,16 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         self.navigationController!.pushViewController(detailController, animated:true)
     }
     
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            memes.removeAtIndex(indexPath.row)
+            memeTable.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            memeTable.reloadData()
+        }
+    }
 }
 
