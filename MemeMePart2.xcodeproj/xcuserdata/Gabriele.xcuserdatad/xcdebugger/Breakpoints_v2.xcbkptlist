@@ -186,7 +186,7 @@
                   moduleName = "MemeMePart2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gabriele/Dropbox/iOS_Nanodegree/MemeMePart2/MemeMePractice/MemeEditorViewController.swift"
-                  timestampString = "482464709.392836"
+                  timestampString = "482467196.111493"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -201,7 +201,7 @@
                   moduleName = "MemeMePart2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gabriele/Dropbox/iOS_Nanodegree/MemeMePart2/MemeMePractice/MemeEditorViewController.swift"
-                  timestampString = "482464709.392945"
+                  timestampString = "482467196.111648"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -216,7 +216,7 @@
                   moduleName = "MemeMePart2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gabriele/Dropbox/iOS_Nanodegree/MemeMePart2/MemeMePractice/MemeEditorViewController.swift"
-                  timestampString = "482464709.393035"
+                  timestampString = "482467196.111746"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -231,7 +231,7 @@
                   moduleName = "MemeMePart2"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Gabriele/Dropbox/iOS_Nanodegree/MemeMePart2/MemeMePractice/MemeEditorViewController.swift"
-                  timestampString = "482464709.393172"
+                  timestampString = "482467196.111831"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -239,6 +239,20 @@
                   offsetFromSymbolStart = "88">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MemeMePractice/CustomMemeViewCell.swift"
+            timestampString = "482467053.596166"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
