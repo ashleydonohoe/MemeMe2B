@@ -35,52 +35,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgv-Qm-lBB">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="KpW-2C-4J8"/>
-                                    <constraint firstAttribute="height" constant="44" id="g12-5M-I2P"/>
-                                    <constraint firstAttribute="height" constant="44" id="wKX-uQ-4F6"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem title="Album" id="ncB-Sw-eX3">
-                                        <connections>
-                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="dHZ-RS-dCg"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jb0-Nh-4Lf"/>
-                                    <barButtonItem systemItem="camera" id="NfU-bR-V82">
-                                        <connections>
-                                            <action selector="pickFromCamera:" destination="BYZ-38-t0r" id="4Bp-lx-iaQ"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="g12-5M-I2P"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="g12-5M-I2P"/>
-                                    </mask>
-                                </variation>
-                            </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZuY-Se-xUm">
-                                <rect key="frame" x="-2" y="0.0" width="602" height="655"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VZj-2j-Aby" userLabel="topText">
-                                <rect key="frame" x="37" y="99" width="526" height="23"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HjZ-xO-HMN" userLabel="bottomText">
                                 <rect key="frame" x="37" y="483" width="526" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="hUm-G9-aM8"/>
                                 </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VZj-2j-Aby" userLabel="topText">
+                                <rect key="frame" x="37" y="99" width="526" height="23"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -116,6 +85,37 @@
                                     </mask>
                                 </variation>
                             </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgv-Qm-lBB">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="KpW-2C-4J8"/>
+                                    <constraint firstAttribute="height" constant="44" id="g12-5M-I2P"/>
+                                    <constraint firstAttribute="height" constant="44" id="wKX-uQ-4F6"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Album" id="ncB-Sw-eX3">
+                                        <connections>
+                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="dHZ-RS-dCg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jb0-Nh-4Lf"/>
+                                    <barButtonItem systemItem="camera" id="NfU-bR-V82">
+                                        <connections>
+                                            <action selector="pickFromCamera:" destination="BYZ-38-t0r" id="4Bp-lx-iaQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="g12-5M-I2P"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="g12-5M-I2P"/>
+                                    </mask>
+                                </variation>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -129,13 +129,13 @@
                             <constraint firstItem="n56-HE-EOm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Qjg-yr-iLE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="n56-HE-EOm" secondAttribute="trailing" constant="-20" id="W64-GI-5Tg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kgv-Qm-lBB" secondAttribute="bottom" id="X6p-X1-eAS"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="ZuY-Se-xUm" secondAttribute="bottom" constant="-55" id="amM-0v-hTa"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ZuY-Se-xUm" secondAttribute="bottom" id="amM-0v-hTa"/>
                             <constraint firstItem="HjZ-xO-HMN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="c1M-aw-5I3"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kgv-Qm-lBB" secondAttribute="bottom" id="j6l-dQ-1TG"/>
                             <constraint firstItem="kgv-Qm-lBB" firstAttribute="top" secondItem="HjZ-xO-HMN" secondAttribute="bottom" constant="43" id="nCx-h8-6hz"/>
                             <constraint firstItem="ZuY-Se-xUm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qHo-nw-LBI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VZj-2j-Aby" secondAttribute="trailing" constant="17" id="rc3-gF-0sR"/>
-                            <constraint firstItem="ZuY-Se-xUm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-22" id="s5c-kt-mNz"/>
+                            <constraint firstItem="ZuY-Se-xUm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="s5c-kt-mNz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kgv-Qm-lBB" secondAttribute="trailing" constant="-20" id="xBk-4R-ziI"/>
                             <constraint firstItem="kgv-Qm-lBB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="yBC-vx-C4N"/>
                         </constraints>
@@ -152,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1005" y="3413"/>
+            <point key="canvasLocation" x="1035" y="3411"/>
         </scene>
         <!--Tab Bar View-->
         <scene sceneID="uXC-Q5-H4B">
@@ -267,8 +267,8 @@
         <!--MemeCollectionViewController-->
         <scene sceneID="kkX-1W-SIb">
             <objects>
-                <viewController title="MemeCollectionViewController" id="crK-ta-P4H" customClass="MemeCollectionViewController" customModule="MemeMePart2" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" indicatorStyle="white" dataMode="prototypes" id="yVK-xd-hyV">
+                <viewController title="MemeCollectionViewController" modalPresentationStyle="currentContext" id="crK-ta-P4H" customClass="MemeCollectionViewController" customModule="MemeMePart2" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" id="yVK-xd-hyV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -334,6 +334,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MeV-6n-cPb"/>
+        <segue reference="Rgm-K1-pZE"/>
     </inferredMetricsTieBreakers>
 </document>

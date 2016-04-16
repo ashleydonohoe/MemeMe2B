@@ -29,11 +29,6 @@ class MemeCollectionViewController: UICollectionViewController {
         let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
         memes = applicationDelegate.memes
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     override func viewWillAppear(animated: Bool) {
         getMemes()
@@ -43,10 +38,10 @@ class MemeCollectionViewController: UICollectionViewController {
         
         if(UIDeviceOrientationIsPortrait(UIDevice.currentDevice().orientation)) {
             space = 3.0
-            dimension = (self.view.frame.size.width - (2 * space)) / 3.0
+            dimension = (view.frame.size.width - (2 * space)) / 3.0
         } else {
             space = 5.0
-            dimension = (self.view.frame.size.width - (2 * space)) / 5.0
+            dimension = (view.frame.size.width - (2 * space)) / 5.0
         }
         
         flowLayout.minimumInteritemSpacing = space
