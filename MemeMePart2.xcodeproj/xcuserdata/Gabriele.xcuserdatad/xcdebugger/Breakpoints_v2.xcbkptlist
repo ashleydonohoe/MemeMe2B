@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MemeMePractice/MemeCollectionViewController.swift"
-            timestampString = "482476319.141694"
+            timestampString = "482478828.495354"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "5">
          </BreakpointContent>

@@ -235,15 +235,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dDL-xz-R66">
-                                <rect key="frame" x="54" y="55" width="492" height="475"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lFi-7v-vUK" firstAttribute="top" secondItem="dDL-xz-R66" secondAttribute="bottom" constant="70" id="Bb8-D6-WQf"/>
-                            <constraint firstItem="dDL-xz-R66" firstAttribute="top" secondItem="gJk-Mx-m80" secondAttribute="bottom" constant="35" id="H7F-83-Ow7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dDL-xz-R66" secondAttribute="trailing" constant="34" id="WVO-bU-b89"/>
-                            <constraint firstItem="dDL-xz-R66" firstAttribute="leading" secondItem="lx0-0A-9XA" secondAttribute="leadingMargin" constant="34" id="awO-Fj-2GS"/>
+                            <constraint firstItem="lFi-7v-vUK" firstAttribute="top" secondItem="dDL-xz-R66" secondAttribute="bottom" id="Bb8-D6-WQf"/>
+                            <constraint firstItem="dDL-xz-R66" firstAttribute="top" secondItem="gJk-Mx-m80" secondAttribute="bottom" id="H7F-83-Ow7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dDL-xz-R66" secondAttribute="trailing" constant="-20" id="WVO-bU-b89"/>
+                            <constraint firstItem="dDL-xz-R66" firstAttribute="leading" secondItem="lx0-0A-9XA" secondAttribute="leadingMargin" constant="-20" id="awO-Fj-2GS"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -268,10 +268,9 @@
         <scene sceneID="kkX-1W-SIb">
             <objects>
                 <viewController title="MemeCollectionViewController" modalPresentationStyle="currentContext" id="crK-ta-P4H" customClass="MemeCollectionViewController" customModule="MemeMePart2" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" id="yVK-xd-hyV">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yVK-xd-hyV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZPv-JX-6OY">
                             <size key="itemSize" width="129" height="131"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -303,6 +302,10 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="crK-ta-P4H" id="Zyv-3q-T33"/>
+                            <outlet property="delegate" destination="crK-ta-P4H" id="ve7-uo-NgU"/>
+                        </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Sent Memes" id="2Vf-j3-Iv2"/>
                     <connections>
