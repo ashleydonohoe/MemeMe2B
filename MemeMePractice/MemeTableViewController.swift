@@ -23,9 +23,6 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     override func viewWillAppear(animated: Bool) {
-        /*let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        memes = applicationDelegate.memes
-        memeTable.reloadData()*/
         getMemes()
         memeTable.reloadData()
     }
@@ -56,7 +53,7 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("memeDisplayViewController") as! MemeDetailViewController
         detailController.meme = memes[indexPath.row]
-        self.navigationController!.pushViewController(detailController, animated:true)
+        navigationController!.pushViewController(detailController, animated:true)
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

@@ -98,7 +98,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         }
         
         shareButton.enabled = true
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     // Generate the memed image
@@ -135,9 +135,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         // Checks if active textField is the bottomText. If so, the keyboard will move up. Else, keyboard notifications won't be subscribed to. This code is needed so the top field doesn't make the keyboard move up and hide the field from view.
         if textField.isEqual(bottomText) {
-            self.subscribeToKeyboardNotifications()
+           subscribeToKeyboardNotifications()
         } else {
-            self.unsubscribeFromKeyboardNotifications()
+           unsubscribeFromKeyboardNotifications()
         }
     }
     
@@ -162,7 +162,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     // Moves the view when keyboard covers text field
     func keyboardWillShow(notification: NSNotification) {
-        self.view.frame.origin.y -= getKeyboardHeight(notification)
+        view.frame.origin.y -= getKeyboardHeight(notification)
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -189,7 +189,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     // Hiding keyboard
     func keyboardWillHide(notification: NSNotification) {
-        view.frame.origin.y += (getKeyboardHeight(notification))
+        view.frame.origin.y = 0
     }
 }
 
